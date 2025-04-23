@@ -65,6 +65,34 @@
             justify-content: center;
         }
 
+        #caro_app {
+            margin: 12px;
+            display: inline-flex;
+            flex-direction: column;
+        }
+
+        .row_item {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cell_item {
+            width: 30px;
+            height: 30px;
+            border: 1px solid rgb(5, 48, 5);
+            position: relative;
+        }
+        .caro_icon {
+            height: 25px;
+            width: 25px;
+            position:absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
     </style>
 </head>
 <body>
@@ -87,6 +115,8 @@
             </div>
             <div class="output_area">
                 <h2>Caro board</h2>
+                <div id="caro_app"></div>
+                <img src="" alt="">
             </div>
         </div>
     </div>
