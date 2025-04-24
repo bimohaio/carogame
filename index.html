@@ -5,118 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Hello ajinomoto</title>
-    <style>
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          font-family: Arial, Helvetica, sans-serif;
-          font-size: 16px;
-        }
-
-        #app {
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between;
-            margin: 16px;
-            width: 80vw;
-            border: 1px solid green;
-            border-radius: 7px;
-            padding: 10px;
-        }
-
-        .input_area {
-            width: 30%;
-            border: 1px solid black;
-        }
-
-        .output_area {
-            width: 68%;
-            border: 1px solid black;
-            text-align: center;
-            padding: 12px;
-        }
-
-        input {
-            padding: 4px 8px;
-            text-align: right;
-        }
-
-        .input_group {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 8px 12px;
-        }
-
-        .input_num {
-            border: 0.5px solid purple;
-            border-radius: 7px;
-            height: 33px;
-            width: 220px;
-        }
-        .button_action {
-            margin: 12px;
-            display: flex;
-            justify-content: center;
-        }
-
-        #caro_app {
-            margin: 12px;
-            display: inline-flex;
-            flex-direction: column;
-        }
-
-        .row_item {
-            display: inline-flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .cell_item {
-            width: 30px;
-            height: 30px;
-            border: 1px solid rgb(5, 48, 5);
-            position: relative;
-        }
-        .caro_icon {
-            height: 25px;
-            width: 25px;
-            position:absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-    </style>
 </head>
 <body>
     <script src="./main.js" defer></script>
     <div id="app">
         <div class="container">
             <div class="input_area">
-
                 <div class="input_group">
                     <label for="row_num">Row Number</label>
-                    <input type="number" name="row_num" id="row_num" class="input_num" value="10">
+                    <input type="number" name="row_num" id="row_num" class="input_num" value="20">
                 </div>
                 <div class="input_group">
                     <label for="row_num">Column Number</label>
-                    <input type="number" name="row_num" id="col_num" class="input_num" value="10">
+                    <input type="number" name="row_num" id="col_num" class="input_num" value="20">
                 </div>
                 <div class="button_action">
-                    <input type="button" value="Generate" id="generate_btn">
+                    <input type="button" value="Reset" id="generate_btn">
+                </div>
+                <div class="leader_board">
+                    <h2>Match</h2>
+                    <div class="user_group">
+                        <div class="user_item">
+                            <div class="avatar">
+                                <img src="./icons/animals/parrot-icon.svg" alt="">
+                                <a href="#">Parrot</a>
+                            </div>
+                            <div class="caro_type">
+                                <img src="./icons/circle-icon.svg" class="caro_icon" alt="">
+                            </div>
+                        </div>
+                        <div class="score">
+                            <p class="score" id="score">0-0</p>
+                        </div>
+                        <div class="user_item">
+                            <div class="avatar">
+                                <img src="./icons/animals/dog-icon.svg" alt="">
+                                <a href="#">Dog</a>
+                            </div>
+                            <div class="caro_type">
+                                <img src="./icons/cross-icon.svg" class="caro_icon" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="output_area">
-                <h2>Caro board</h2>
+                <h2 class="leader_board_title">Caro board</h2>
                 <div id="caro_app"></div>
-                <img src="" alt="">
             </div>
         </div>
     </div>
